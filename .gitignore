@@ -1,0 +1,48 @@
+# Build
+.webpack/*
+.awcache/*
+dist/*
+client/*
+build/*
+
+# Config
+.aws/config.json
+*.env
+*.env.test
+.npmrc
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Ignore lock file from npm@5, we use yarn and yarn.lock instead
+package-lock.json
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+
+# VSCode
+.vscode/
+
+
+# Storybook cache
+.cache/
+
+# Graphql Schema fetched manually from endpoint
+.schema.graphql
