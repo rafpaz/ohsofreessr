@@ -6,7 +6,6 @@ client/*
 build/*
 
 # Config
-.aws/config.json
 *.env
 *.env.test
 .npmrc
@@ -40,9 +39,14 @@ node_modules
 # VSCode
 .vscode/
 
-
-# Storybook cache
-.cache/
-
 # Graphql Schema fetched manually from endpoint
 .schema.graphql
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# next.js
+/.next/
+/out/
