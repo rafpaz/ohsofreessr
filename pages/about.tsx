@@ -19,9 +19,9 @@ const AboutPage: React.FunctionComponent = () => {
         </Link>
       </p>
       <>
-        {data.characters.results.map((data: any) => (
-          <ul key={data.id}>
-            <li>{data.name}</li>
+        {data.allProduct.map(({ title, _id }) => (
+          <ul key={_id}>
+            <li>{title}</li>
           </ul>
         ))}
       </>

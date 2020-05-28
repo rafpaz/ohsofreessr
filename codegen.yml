@@ -1,0 +1,23 @@
+overwrite: true
+schema: ['./schema.json', './cms-schema.json']
+documents: ['src/graphql/*.graphql', 'src/**/*.{ts,tsx}']
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      scalars:
+        mapAsMap: true
+        Date: string
+        DateTime: string
+        RichTextAST: Json
+        Long: number
+        Json: Json
+      withHOC: false
+      withComponent: false
+      withHooks: true
+      preResolveTypes: true
+      skipTypename: true
+      addUnderscoreToArgsType: true
