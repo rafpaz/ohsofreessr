@@ -1,6 +1,6 @@
 overwrite: true
-schema: ['./schema.json', './cms-schema.json']
-documents: ['src/graphql/*.graphql', 'src/**/*.{ts,tsx}']
+schema: ['./schema.json']
+documents: ['./gql/*.{ts,tsx}']
 generates:
   src/generated/graphql.tsx:
     plugins:
