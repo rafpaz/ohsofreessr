@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { withApollo } from '../libs/apollo';
-import { useAllCharactersQuery } from '../src/generated/graphql';
+import { ALL_PRODUCTS } from '../gql/allProducts';
+import { useQuery } from '@apollo/react-hooks';
 
-const AboutPage: React.FunctionComponent = () => {
-  const { loading, error, data } = useAllCharactersQuery();
+const AboutPage = () => {
+  const { loading, error, data } = useQuery(ALL_PRODUCTS);
   if (error) return <h1>Error</h1>;
   if (loading || !data) return <h1>Loading...</h1>;
 
@@ -28,4 +28,4 @@ const AboutPage: React.FunctionComponent = () => {
   );
 };
 
-export default withApollo({ ssr: true })(AboutPage);
+export default AboutPage;
